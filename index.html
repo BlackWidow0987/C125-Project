@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Realtime Drawing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="data:image/jpeg;base64,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">
+  <center>
+    <h3 class="btn btn-warning heading">
+      FONT MANIPULATOR
+      <br>
+      <span class="note">
+        NOTE - Get Your Left And Right Wrist Closer To Eachother To Reduce The Font size And To Increase The Font Size Keep Your Left And Right Wrist Far From Each Other.
+      </span>
+      <br>
+      <span id="font_size"></span>
+    </h3>
+  </center>
+  <div class="copy_right_footer">
+    Developed By Misha
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
